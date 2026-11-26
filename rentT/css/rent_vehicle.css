@@ -1,0 +1,411 @@
+
+/* =====================================
+   RENT A VEHICLE PAGE
+===================================== */
+
+.rental-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 280px;
+    align-items: start;
+    gap: 18px;
+}
+
+.rental-main {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 0;
+}
+
+/* =====================================
+   RENTAL CARDS
+===================================== */
+
+.rental-card,
+.summary-card {
+    min-width: 0;
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #e5eaf2;
+    border-radius: 11px;
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.025);
+}
+
+.section-heading {
+    padding-bottom: 13px;
+    margin-bottom: 17px;
+    border-bottom: 1px solid #edf0f5;
+}
+
+.section-heading h2,
+.summary-card h2 {
+    margin: 0;
+    color: #172033;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* =====================================
+   RENTAL INFORMATION
+===================================== */
+
+.rental-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px 14px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    min-width: 0;
+}
+
+.form-group label {
+    color: #334155;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.form-group label span {
+    color: #ef4444;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    height: 43px;
+    padding: 0 12px;
+    border: 1px solid #dce3ed;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #334155;
+    font-family: inherit;
+    font-size: 12px;
+    outline: none;
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #0869d7;
+    box-shadow: 0 0 0 3px rgba(8, 105, 215, 0.09);
+}
+
+/* =====================================
+   ADD-ONS AND OPTIONS
+===================================== */
+
+.addons-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.addon-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+    min-height: 68px;
+    padding: 12px;
+    border: 1px solid #dce3ed;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.addon-option:hover {
+    border-color: #8bb5ff;
+    background: #f8faff;
+}
+
+.addon-option.selected-addon {
+    border-color: #0869d7;
+    background: #f1f6ff;
+}
+
+.addon-checkbox {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    accent-color: #0869d7;
+    cursor: pointer;
+}
+
+.addon-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    font-size: 17px;
+}
+
+.insurance-icon {
+    background: #e8f0ff;
+    color: #3578e5;
+}
+
+.gps-icon {
+    background: #e2f8ed;
+    color: #10a878;
+}
+
+.addon-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+}
+
+.addon-details strong {
+    color: #172033;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.addon-details small {
+    color: #718096;
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+/* =====================================
+   PAYMENT METHOD
+===================================== */
+
+.payment-options {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.payment-option {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 40px;
+    padding: 9px 13px;
+    border: 1px solid #dce3ed;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #475569;
+    font-size: 11px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.payment-option:hover {
+    border-color: #8bb5ff;
+}
+
+.payment-option.selected-payment {
+    border-color: #0869d7;
+    background: #f1f6ff;
+    color: #0869d7;
+}
+
+.payment-option input {
+    width: 13px;
+    height: 13px;
+    margin: 0;
+    accent-color: #0869d7;
+}
+
+.payment-option i {
+    font-size: 13px;
+}
+
+/* =====================================
+   RIGHT SUMMARY COLUMN
+===================================== */
+
+.rental-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 0;
+}
+
+.summary-card {
+    padding: 20px 17px;
+}
+
+.summary-card h2 {
+    margin-bottom: 17px;
+}
+
+.summary-details {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e8edf4;
+}
+
+.summary-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 9px 0;
+    color: #718096;
+    font-size: 11px;
+}
+
+.summary-row span {
+    flex-shrink: 0;
+}
+
+.summary-row strong {
+    max-width: 65%;
+    color: #334155;
+    font-size: 11px;
+    font-weight: 600;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+.summary-breakdown {
+    padding-top: 9px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e8edf4;
+}
+
+.summary-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-top: 15px;
+    color: #172033;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.summary-total strong {
+    color: #0869d7;
+    font-size: 19px;
+}
+
+/* =====================================
+   ACTION BUTTONS
+===================================== */
+
+.confirm-btn,
+.reset-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 43px;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.confirm-btn {
+    border: 1px solid #0869d7;
+    background: #0869d7;
+    color: #ffffff;
+    box-shadow: 0 3px 8px rgba(8, 105, 215, 0.18);
+}
+
+.confirm-btn:hover {
+    background: #0758b5;
+    border-color: #0758b5;
+    transform: translateY(-1px);
+}
+
+.reset-btn {
+    border: 1px solid #dce3ed;
+    background: #ffffff;
+    color: #64748b;
+}
+
+.reset-btn:hover {
+    background: #f5f7fb;
+    border-color: #cbd5e1;
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.rental-main .page-footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px 2px;
+    color: #94a3b8;
+    font-size: 10px;
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 1100px) {
+
+    .rental-layout {
+        grid-template-columns: minmax(0, 1fr) 250px;
+        gap: 14px;
+    }
+
+    .rental-card {
+        padding: 17px;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .rental-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .rental-sidebar {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        align-items: start;
+    }
+
+    .summary-card {
+        grid-row: span 2;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .rental-form-grid,
+    .addons-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rental-sidebar {
+        display: flex;
+    }
+
+    .payment-options {
+        align-items: stretch;
+    }
+
+    .payment-option {
+        flex: 1 1 40%;
+    }
+
+    .rental-main .page-footer {
+        flex-direction: column;
+    }
+
+}

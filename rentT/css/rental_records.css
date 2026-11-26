@@ -1,0 +1,480 @@
+
+/* =====================================
+   RENTAL RECORDS MAIN CONTENT
+===================================== */
+
+.rental-records-content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+    min-width: 0;
+    padding: 20px;
+    color: #172b4d;
+}
+
+/* =====================================
+   PAGE HEADING
+===================================== */
+
+.records-page-heading h1 {
+    margin: 0 0 5px;
+    font-size: 19px;
+    font-weight: 700;
+    color: #172b4d;
+}
+
+.records-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #8293ac;
+    font-size: 10px;
+}
+
+.records-breadcrumb i:first-child {
+    color: #2563eb;
+}
+
+.records-breadcrumb i:not(:first-child) {
+    font-size: 9px;
+}
+
+.records-breadcrumb span:last-child {
+    color: #2563eb;
+}
+
+/* =====================================
+   SEARCH AND FILTER TOOLBAR
+===================================== */
+
+.records-toolbar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.records-search-box {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    width: 208px;
+    height: 33px;
+    padding: 0 10px;
+    background: #ffffff;
+    border: 1px solid #dce4ef;
+    border-radius: 7px;
+    color: #8a9bb2;
+}
+
+.records-search-box:focus-within {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.08);
+}
+
+.records-search-box i {
+    font-size: 12px;
+}
+
+.records-search-box input {
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #334155;
+    font-family: inherit;
+    font-size: 10px;
+}
+
+.records-search-box input::placeholder {
+    color: #9aa9bd;
+}
+
+.records-filter {
+    width: 96px;
+    height: 33px;
+    padding: 0 10px;
+    border: 1px solid #dce4ef;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #334155;
+    font-family: inherit;
+    font-size: 10px;
+    outline: none;
+    cursor: pointer;
+}
+
+.records-filter:focus {
+    border-color: #2563eb;
+}
+
+.records-export-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    height: 33px;
+    padding: 0 12px;
+    border: 1px solid #dce4ef;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #475569;
+    font-family: inherit;
+    font-size: 10px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.records-export-btn:hover {
+    border-color: #2563eb;
+    color: #2563eb;
+    background: #f5f8ff;
+}
+
+/* =====================================
+   TABLE CONTAINER
+===================================== */
+
+.records-table-card {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #e1e8f0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(15, 23, 42, 0.04);
+}
+
+.records-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.rental-records-table {
+    width: 100%;
+    min-width: 1050px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+/* TABLE HEADER */
+
+.rental-records-table thead {
+    background: #f8fafc;
+}
+
+.rental-records-table th {
+    height: 33px;
+    padding: 0 12px;
+    color: #53647c;
+    font-size: 9px;
+    font-weight: 600;
+    white-space: nowrap;
+    border-bottom: 1px solid #e8edf4;
+}
+
+/* TABLE BODY */
+
+.rental-records-table td {
+    height: 45px;
+    padding: 7px 12px;
+    color: #52647d;
+    font-size: 9px;
+    white-space: nowrap;
+    border-bottom: 1px solid #edf1f6;
+}
+
+.rental-records-table tbody tr {
+    transition: background 0.2s ease;
+}
+
+.rental-records-table tbody tr:hover {
+    background: #f8faff;
+}
+
+.rental-records-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* =====================================
+   TABLE TEXT
+===================================== */
+
+.rental-id {
+    color: #1459dc !important;
+    font-weight: 600;
+}
+
+.customer-name {
+    color: #172b4d !important;
+    font-weight: 600;
+}
+
+.plate-number {
+    color: #64748b !important;
+    font-family: monospace;
+    letter-spacing: 0.3px;
+}
+
+.days-value {
+    color: #172b4d !important;
+    font-weight: 700;
+    text-align: center;
+}
+
+.total-amount {
+    color: #172b4d !important;
+    font-weight: 700;
+}
+
+/* =====================================
+   RENTAL STATUS
+===================================== */
+
+.rental-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    min-width: 65px;
+    padding: 5px 8px;
+    border-radius: 20px;
+    font-size: 8px;
+    font-weight: 700;
+}
+
+.rental-status span {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+}
+
+.rental-status.active {
+    background: #d1fae5;
+    color: #047857;
+}
+
+.rental-status.active span {
+    background: #059669;
+}
+
+.rental-status.completed {
+    background: #d1fae5;
+    color: #047857;
+}
+
+.rental-status.completed span {
+    background: #059669;
+}
+
+.rental-status.overdue {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.rental-status.overdue span {
+    background: #dc2626;
+}
+
+.rental-status.pending {
+    background: #fef3c7;
+    color: #a16207;
+}
+
+.rental-status.pending span {
+    background: #d97706;
+}
+
+/* =====================================
+   ACTION BUTTONS
+===================================== */
+
+.record-actions {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.record-actions button {
+    min-width: 39px;
+    height: 25px;
+    padding: 0 8px;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 9px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.view-btn {
+    border: 1px solid #bfdbfe;
+    background: #f0f6ff;
+    color: #1459dc;
+}
+
+.view-btn:hover {
+    background: #2563eb;
+    border-color: #2563eb;
+    color: #ffffff;
+}
+
+.edit-btn {
+    border: 1px solid #dce4ef;
+    background: #ffffff;
+    color: #334155;
+}
+
+.edit-btn:hover {
+    border-color: #2563eb;
+    color: #2563eb;
+    background: #f5f8ff;
+}
+
+/* =====================================
+   EMPTY STATE
+===================================== */
+
+.records-empty-state {
+    padding: 45px 15px;
+    text-align: center;
+    color: #94a3b8;
+}
+
+.records-empty-state i {
+    font-size: 32px;
+}
+
+.records-empty-state h3 {
+    margin: 10px 0 5px;
+    color: #334155;
+    font-size: 13px;
+}
+
+.records-empty-state p {
+    margin: 0;
+    font-size: 10px;
+}
+
+.records-empty-state[hidden] {
+    display: none;
+}
+
+/* =====================================
+   TABLE FOOTER
+===================================== */
+
+.records-table-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 48px;
+    padding: 8px 13px;
+    border-top: 1px solid #edf1f6;
+}
+
+.records-table-footer > span {
+    color: #71839e;
+    font-size: 10px;
+}
+
+/* PAGINATION */
+
+.records-pagination {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.records-pagination button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 26px;
+    height: 26px;
+    padding: 0 8px;
+    border: 1px solid #dce4ef;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #475569;
+    font-family: inherit;
+    font-size: 9px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.records-pagination button:hover:not(:disabled):not(.active) {
+    border-color: #2563eb;
+    color: #2563eb;
+}
+
+.records-pagination button.active {
+    border-color: #2563eb;
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.records-pagination button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.records-pagination button[hidden] {
+    display: none;
+}
+
+/* =====================================
+   PAGE FOOTER
+===================================== */
+
+.records-page-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 2px;
+    color: #94a3b8;
+    font-size: 10px;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 768px) {
+
+    .rental-records-content {
+        padding: 15px;
+    }
+
+    .records-table-footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .records-search-box {
+        width: 100%;
+    }
+
+    .records-toolbar {
+        width: 100%;
+    }
+
+    .records-filter {
+        flex: 1;
+    }
+
+    .records-page-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
